@@ -1,1 +1,24 @@
-# your User class goes here
+import csv
+import os.path
+
+class User():
+    def __init__(self, name, email_address, driver_license, valuable_pii):
+        self.name = name
+        self.email_address = email_address
+        self.driver_license = driver_license
+        self.valuable_pii = valuable_pii
+
+    @classmethod
+    def objects(cls):
+        users = []
+        my_path = os.path.abspath(os.path.dirname(__file__))
+        path = os.path.join(my_path, "../data/students.csv")
+
+        with open(path) as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                print(dict(row))
+                students.append(Student(**dict(row)))
+
+        return students
+
