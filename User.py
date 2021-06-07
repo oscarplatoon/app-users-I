@@ -12,13 +12,13 @@ class User():
     def objects(cls):
         users = []
         my_path = os.path.abspath(os.path.dirname(__file__))
-        path = os.path.join(my_path, "../data/students.csv")
+        path = os.path.join(my_path, "data/users.csv")
 
         with open(path) as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 print(dict(row))
-                students.append(Student(**dict(row)))
+                users.append(User(**dict(row)))
 
-        return students
+        return users
 
