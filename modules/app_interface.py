@@ -34,6 +34,3 @@ class AppInterface:
         user_data['driver_license'] = input("Enter user driver license: ")
         user_data['valuable_pii'] = input("Enter user valuable PII: ")
         self.application.add_user(user_data)
-
-test = AppInterface("Test")
-test.run()
