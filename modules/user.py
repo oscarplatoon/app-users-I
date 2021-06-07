@@ -8,11 +8,14 @@ class User():
         self.driver_license = driver_license
         self.valuable_pii = valuable_pii
 
+    def __str__(self):
+        return(f"{self.name}, {self.driver_license}")
+
     @classmethod
     def objects(cls):
         users = []
         my_path = os.path.abspath(os.path.dirname(__file__))
-        path = os.path.join(my_path, "data/users.csv")
+        path = os.path.join(my_path, "../data/users.csv")
 
         with open(path) as csvfile:
             reader = csv.DictReader(csvfile)
