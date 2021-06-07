@@ -1,28 +1,11 @@
 # your User class goes here
 
+class User:
+    def __init__(self, account_name, account_email, user_name, user_password):
+        self.name = account_name
+        self.email = account_email
+        self.user_name = user_name
+        self.user_password = user_password
 
-class User():
-    
-    def __init__(self, name):#
-        self.name = name
-        self.user_account = []
-
-    def run(self):
-        self.account_made = None
-        run_account = self.run()
-        self.make_account()
-        if self.account_made == None:
-            print('Please try again')
-            while self.account_made == True:
-                print('tested')
-
-    def make_account(self):
-        print(f'Welcome to the App Store!\n')
-        enter_info = self.user_account.append(input("Please enter your full name to register an account: "))
-        email_info = self.user_account.append(input("Please enter your email: "))
-        self.account_made == True
-        return run_account
-
-    def pick_user_name(self):
-        self.user_name = self.user_account.append(input('Please choose a user name: '))
-        self.user_password = self.user_account.append(input('Please choose a user name: '))
+    def __str__(self):
+        return f"Name - {self.name}\n Email - {self.email} \n User Name - {self.user_name} \n Password {self.user_password}"

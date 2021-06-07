@@ -1,3 +1,3 @@
-from classes.User import User
+from interface import New_User_Interface
 
-User('Kyle').run()
+New_User_Interface('Kyle')
