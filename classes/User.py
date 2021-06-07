@@ -7,8 +7,14 @@ class User:
         self.email = email
         self.license = license
 
-    def create_user(self):
-        return self.create_user
+    def add_user(self):
+        return self.add_user
+
+    def add_email(self):
+        return self.add_email
+
+    def add_license(self):
+        return self.add_license
 
     def get_name(self):
         return self.name
