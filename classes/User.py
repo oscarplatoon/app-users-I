@@ -1,4 +1,5 @@
 # your User class goes here
+from classes.posts import Posts
 import csv
 import os
 
@@ -8,10 +9,12 @@ class User:
         self.name = name
         self.email_address = email_address
         self.dl_number = dl_number
+
     
     def __str__(self):
         return f'\n{self.name}\n-email: {self.email_address}\nDL number: {self.dl_number}\n'
 
+    
     @classmethod
     def objects(cls):
         users = []
@@ -23,3 +26,5 @@ class User:
                 users.append(User(**dict(row)))
 
         return users
+
+    

@@ -5,7 +5,7 @@ mode = ''
 
 
 while mode != '5':
-    mode = input("\nWhat would you like to do?\nOptions:\n1. Add a User\n2. List Users\n5. Quit\n")
+    mode = input("\nWhat would you like to do?\nOptions:\n1. Add a User\n2. List Users\n3. Add a Post\n5. Quit\n")
     if mode == '1':
         user_data = {}
         user_data['name'] = input("Enter your name: ")
@@ -15,6 +15,10 @@ while mode != '5':
 
     elif mode == '2':
         app.list_users()
+    elif mode == '3':
+        drivers_id = input("Enter driver's license number: ")
+        app.add_post(drivers_id)               
+ 
     elif mode == '5':
         break
     else:
