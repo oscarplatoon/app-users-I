@@ -4,5 +4,21 @@ You have the next big thing on the interwebs.  But a thing isn't anything withou
 
 1. Write a `User` class that can handle your growing application's needs.
 2. Create a few users.
+-------------------------------------------------------------------------
+
+
+
+App Users II
+Wow! Literally overnight, your <INSERT APPLICATION NAME> app has really taken off! You decide to add a new feature to your app: posts.
+
+In order to gain this new functionality, you'll have to modify your original User class.
+
+Requirements
+Step 1. Add a method to your User class that allows for creating a new user post.
+Step 2. Add any necessary instance properties to make step 1 work. What data structure should you use?
+Add a class variable that stores the posts from every user. What data structure should you use?
+Make sure that the the information stays in sync!
+Bonus
+Add a method that allows for deleting a post. Again, make sure that your information stays in sync.
 
 
